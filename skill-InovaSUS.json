@@ -1,0 +1,975 @@
+{
+  "name": "InovaSUS",
+  "intents": [
+    {
+      "intent": "especializacao",
+      "examples": [
+        {
+          "text": "Quero fazer especialização"
+        },
+        {
+          "text": "Gostaria de informações sobre curso de especialização"
+        },
+        {
+          "text": "Gostaria de saber quando vai iniciar o curso de especialização"
+        },
+        {
+          "text": "vigilancia sanitaria"
+        },
+        {
+          "text": "Gostaria de informações do curso de especialização em vigilância sanitária."
+        },
+        {
+          "text": "vigilância"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "contato",
+      "examples": [],
+      "description": ""
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "Bom dia!"
+        },
+        {
+          "text": "Boa tarde!"
+        },
+        {
+          "text": "Oi!"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Boa noite!"
+        },
+        {
+          "text": "OLA"
+        },
+        {
+          "text": "OLÁ"
+        },
+        {
+          "text": "Há alguém disponível para conversar?"
+        },
+        {
+          "text": "Onde vocês se encontram?"
+        },
+        {
+          "text": "Posso marcar um horário?"
+        },
+        {
+          "text": "Quais serviços você oferece?"
+        },
+        {
+          "text": "Olá!"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "despedida",
+      "examples": [
+        {
+          "text": "obrigada"
+        },
+        {
+          "text": "obrigado"
+        },
+        {
+          "text": "Obrigado."
+        },
+        {
+          "text": "Obrigada."
+        },
+        {
+          "text": "obrigada!"
+        },
+        {
+          "text": "obrigado!"
+        },
+        {
+          "text": "ok."
+        },
+        {
+          "text": "OK"
+        },
+        {
+          "text": "Perfeito!"
+        },
+        {
+          "text": "perfeito"
+        },
+        {
+          "text": "Perfeito."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "informacaosobrecurso",
+      "examples": [
+        {
+          "text": "Gostaria de uma informação sobre curso"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "encerramento",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "perfeito",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "obrigado",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "obrigada",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ok",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Inscrição",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "inscrição",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "respostaencerramento",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Não",
+          "synonyms": [
+            "não.",
+            "Nao.",
+            "Não"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "informações",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Requisitos",
+          "synonyms": [
+            "requisito",
+            "requisitos"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Inscrição",
+          "synonyms": [
+            "inscrição",
+            "inscricao"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Informações gerais",
+          "synonyms": [
+            "informações",
+            "informacoes",
+            "informacao",
+            "informação",
+            "informaçoes gerais",
+            "informação geral",
+            "informacão geral",
+            "informaçao geral"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "descrição",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Programa do curso",
+          "synonyms": [
+            "descrição do curso",
+            "sobre o curso",
+            "Programação",
+            "Programa"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "cursosNaoAtendidos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ensino fundamental",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "primário",
+          "synonyms": [
+            "escola primária"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ledor",
+          "synonyms": [
+            "ledor",
+            "curso ledor"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "vigilanciaSanitaria",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "especialização em Vigilância Sanitária",
+          "synonyms": [
+            "vigilância sanitária",
+            "vigilancia sanitaria",
+            "vigilancia",
+            "vigilância",
+            "Sanitária"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "especializacao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Especialização",
+          "synonyms": [
+            "especialização",
+            "especializacao",
+            "especialisacao",
+            "especializaçao",
+            "Especialização."
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "editalvigilanciasanitaria",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "edital",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "documentos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Histórico",
+          "synonyms": [
+            "historico",
+            "histórico",
+            "histórico de curso"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "documento",
+          "synonyms": [
+            "certificado",
+            "declaração",
+            "declaracao",
+            "diploma"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "diploma",
+          "synonyms": [
+            "diploma"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "declaração",
+          "synonyms": [
+            "declaracao de conclusão"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "certificado",
+          "synonyms": [
+            "certificados de conclusão"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "documentação",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "despedida",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "pt-br",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "f1f3665e-583f-491c-999b-5a1b87d2ba92",
+  "webhooks": [
+    {
+      "url": "",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "copy1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para consultas e solicitações de documentos, favor procurar a Secretaria Acadêmica da unidade do curso realizado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1575202152489",
+      "conditions": "@documentos",
+      "dialog_node": "node_21_1575209672648",
+      "previous_sibling": "node_20_1575209645864"
+    },
+    {
+      "type": "standard",
+      "title": "copy1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informações de inscrição acessar a página: https://campusvirtual.fiocruz.br/portal/?q=curso/13566"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1575202152489",
+      "conditions": "@Inscrição",
+      "dialog_node": "node_20_1575209645864",
+      "previous_sibling": "node_19_1575209581910"
+    },
+    {
+      "type": "standard",
+      "title": "copy1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para consultas e solicitações de documentos, favor procurar a Secretaria Acadêmica da unidade do curso realizado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1575202152489",
+      "conditions": "@documentos",
+      "dialog_node": "node_19_1575209581910"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O Programa de Pós-Graduação em Vigilância Sanitária (PPGVS) tem como objetivo formar mestres, altamente qualificados com competências para atuarem primordialmente no Ensino e Pesquisa da Vigilância Sanitária. Os pós-graduados deverão ser capazes de, baseados em conhecimentos experimentais/laboratoriais, desenvolverem visão global sobre a qualidade dos produtos, ambientes e serviços vinculados à Vigilância Sanitária. A área de concentração do Programa, Qualidade de Produtos em Saúde, abrange duas linhas de pesquisa interligadas: 1)Desenvolvimento e Avaliação Interdisciplinares dos Produtos, Serviços e Ambientes Vinculados à Vigilância Sanitária; 2) Avaliação de Contaminantes, Poluentes e Resíduos, e seus Impactos Sobre a Saúde da População."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1575207588636",
+      "conditions": "@descrição",
+      "dialog_node": "node_14_1575207588643",
+      "previous_sibling": "node_13_1575207588643"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informações de inscrição acessar a página: https://campusvirtual.fiocruz.br/portal/?q=curso/13566"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1575207588636",
+      "conditions": "@editalvigilanciasanitaria",
+      "dialog_node": "node_16_1575207588643",
+      "previous_sibling": "node_15_1575207588643"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informações de inscrição acessar a página: https://campusvirtual.fiocruz.br/portal/?q=curso/13566"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1575207588636",
+      "conditions": "@Inscrição",
+      "dialog_node": "node_15_1575207588643",
+      "previous_sibling": "node_14_1575207588643"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para consultas e solicitações de documentos, favor procurar a Secretaria Acadêmica da unidade do curso realizado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1575207588636",
+      "conditions": "@documentos",
+      "dialog_node": "node_13_1575207588643"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Desculpe, esse curso não está disponível na Fiocruz. Posso ajudar com outra informação?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "@cursosNaoAtendidos",
+      "dialog_node": "node_5_1575175767003",
+      "previous_sibling": "node_9_1575171813577"
+    },
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "#saudacao",
+      "dialog_node": "node_9_1575171813577",
+      "previous_sibling": "node_3_1575160058968"
+    },
+    {
+      "type": "standard",
+      "title": "Documentos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certificado\nHistórico\nDeclaração\nDiploma\n"
+              },
+              {
+                "text": "Para consultas e solicitações de documentos, favor procurar a Secretaria Acadêmica da unidade do curso realizado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "@documentos",
+      "dialog_node": "node_3_1575160551419",
+      "previous_sibling": "node_5_1575175767003"
+    },
+    {
+      "type": "standard",
+      "title": "Especialização",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual curso de especialização você tem interesse?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "@especializacao",
+      "dialog_node": "node_3_1575160058968"
+    },
+    {
+      "type": "standard",
+      "title": "EspecializaçãoVigilânciaSanitária",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual informação você precisa saber sobre o curso?\nProgramação do curso\nInscrição\nEdital\nCarga horária"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1575207323944",
+      "conditions": "@vigilanciaSanitaria",
+      "dialog_node": "node_2_1575207323956"
+    },
+    {
+      "type": "standard",
+      "title": "EspecializaçãoVigilânciaSanitária",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual informação você precisa saber sobre o curso?\nProgramação do curso\nInscrição\nEdital\nCarga horária"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1575160058968",
+      "conditions": "@vigilanciaSanitaria",
+      "dialog_node": "node_5_1575160473696"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informações de inscrição acessar a página: https://campusvirtual.fiocruz.br/portal/?q=curso/13566"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1575160473696",
+      "conditions": "@Inscrição",
+      "dialog_node": "node_7_1575202945887",
+      "previous_sibling": "node_1_1575202152489"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O Programa de Pós-Graduação em Vigilância Sanitária (PPGVS) tem como objetivo formar mestres, altamente qualificados com competências para atuarem primordialmente no Ensino e Pesquisa da Vigilância Sanitária. Os pós-graduados deverão ser capazes de, baseados em conhecimentos experimentais/laboratoriais, desenvolverem visão global sobre a qualidade dos produtos, ambientes e serviços vinculados à Vigilância Sanitária. A área de concentração do Programa, Qualidade de Produtos em Saúde, abrange duas linhas de pesquisa interligadas: 1)Desenvolvimento e Avaliação Interdisciplinares dos Produtos, Serviços e Ambientes Vinculados à Vigilância Sanitária; 2) Avaliação de Contaminantes, Poluentes e Resíduos, e seus Impactos Sobre a Saúde da População."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1575160473696",
+      "conditions": "@descrição",
+      "dialog_node": "node_1_1575202152489",
+      "previous_sibling": "node_1_1575173695681"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informações de inscrição acessar a página: https://campusvirtual.fiocruz.br/portal/?q=curso/13566"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1575160473696",
+      "conditions": "@editalvigilanciasanitaria",
+      "dialog_node": "node_1_1575206506511",
+      "previous_sibling": "node_7_1575202945887"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para consultas e solicitações de documentos, favor procurar a Secretaria Acadêmica da unidade do curso realizado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1575160473696",
+      "conditions": "@documentos",
+      "dialog_node": "node_1_1575173695681"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok. Espero ter ajudado. Muito obrigado por ter conversado com você. Qualquer dúvida é só entrar em contato comigo novamente. Até mais."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1575174570868",
+      "conditions": "@respostaencerramento",
+      "dialog_node": "node_8_1575206709469"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informações de inscrição acessar a página: https://campusvirtual.fiocruz.br/portal/?q=curso/13566"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1575207323956",
+      "conditions": "@editalvigilanciasanitaria",
+      "dialog_node": "node_6_1575207323957",
+      "previous_sibling": "node_5_1575207323957"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O Programa de Pós-Graduação em Vigilância Sanitária (PPGVS) tem como objetivo formar mestres, altamente qualificados com competências para atuarem primordialmente no Ensino e Pesquisa da Vigilância Sanitária. Os pós-graduados deverão ser capazes de, baseados em conhecimentos experimentais/laboratoriais, desenvolverem visão global sobre a qualidade dos produtos, ambientes e serviços vinculados à Vigilância Sanitária. A área de concentração do Programa, Qualidade de Produtos em Saúde, abrange duas linhas de pesquisa interligadas: 1)Desenvolvimento e Avaliação Interdisciplinares dos Produtos, Serviços e Ambientes Vinculados à Vigilância Sanitária; 2) Avaliação de Contaminantes, Poluentes e Resíduos, e seus Impactos Sobre a Saúde da População."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1575207323956",
+      "conditions": "@descrição",
+      "dialog_node": "node_4_1575207323957",
+      "previous_sibling": "node_3_1575207323956"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informações de inscrição acessar a página: https://campusvirtual.fiocruz.br/portal/?q=curso/13566"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1575207323956",
+      "conditions": "@Inscrição",
+      "dialog_node": "node_5_1575207323957",
+      "previous_sibling": "node_4_1575207323957"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para consultas e solicitações de documentos, favor procurar a Secretaria Acadêmica da unidade do curso realizado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1575207323956",
+      "conditions": "@documentos",
+      "dialog_node": "node_3_1575207323956"
+    },
+    {
+      "type": "standard",
+      "title": "Especialização - copy1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual curso de especialização você tem interesse?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@especializacao",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1575207323944",
+      "previous_sibling": "node_12_1575207588636"
+    },
+    {
+      "type": "standard",
+      "title": "copy1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O Programa de Pós-Graduação em Vigilância Sanitária (PPGVS) tem como objetivo formar mestres, altamente qualificados com competências para atuarem primordialmente no Ensino e Pesquisa da Vigilância Sanitária. Os pós-graduados deverão ser capazes de, baseados em conhecimentos experimentais/laboratoriais, desenvolverem visão global sobre a qualidade dos produtos, ambientes e serviços vinculados à Vigilância Sanitária. A área de concentração do Programa, Qualidade de Produtos em Saúde, abrange duas linhas de pesquisa interligadas: 1)Desenvolvimento e Avaliação Interdisciplinares dos Produtos, Serviços e Ambientes Vinculados à Vigilância Sanitária; 2) Avaliação de Contaminantes, Poluentes e Resíduos, e seus Impactos Sobre a Saúde da População."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@descrição",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_18_1575207843673",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Despedida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Deseja mais alguma informação?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@encerramento",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1575174570868",
+      "previous_sibling": "node_1_1575207323944"
+    },
+    {
+      "type": "standard",
+      "title": "EspecializaçãoVigilânciaSanitária - copy1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual informação você precisa saber sobre o curso?\nProgramação do curso\nInscrição\nEdital\nCarga horária"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@vigilanciaSanitaria",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_12_1575207588636",
+      "previous_sibling": "node_17_1575207775556"
+    },
+    {
+      "type": "standard",
+      "title": "copy1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Desculpe, esse curso não está disponível na Fiocruz. Posso ajudar com outra informação?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@cursosNaoAtendidos",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_17_1575207775556",
+      "previous_sibling": "node_18_1575207843673"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Sou Oswaldo, Assistente Virtual do canal de ensino da Fiocruz. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "time": 18,
+            "typing": true,
+            "response_type": "pause"
+          },
+          {
+            "values": [
+              {
+                "text": "Estou aqui para tirar dúvidas sobre ensino e cursos da Fiocruz:\n\nAperfeiçoamento\nAtualização\nCapacitação/Cursos Livres\nCursos Técnicos\nDoutorado Acadêmico\nDoutorado profissional\nEducação de Jovens e Adultos\nEspecialização\nEspecificação Técnica\nFormação inicial e continuada\nMestrado Acadêmico\nMestrado Profissional\nResidência Médica\nResidência Multiprofissional.\n\nEm que posso ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome || #saudacao",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "workspace_id": "f1f3665e-583f-491c-999b-5a1b87d2ba92",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": ""
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
